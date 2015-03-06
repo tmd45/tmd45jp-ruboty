@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+echo "  + Install ruby gems"
+bundle check --path=vendor/bundle > /dev/null || \
+  bundle install --path vendor/bundle --binstubs vendor/bundle/bin --jobs=4 --retry=3
